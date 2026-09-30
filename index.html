@@ -1,93 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Shahd Abdelhamid | Portfolio</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
-        }
-        .hero-section {
-            min-height: 85vh;
-            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
-        }
-        .text-accent {
-            color: #06b6d4;
-        }
-        .bg-card {
-            background-color: #1e293b !important;
-            border: 1px solid #334155;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            transition: 0.3s ease;
-            border-color: #06b6d4 !important;
-        }
-    </style>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
-<body class="bg-dark text-light">
+<body id="page-top" class="bg-dark text-light">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top border-bottom border-secondary">
+    <!-- Floating Back to Top Button -->
+    <button id="backToTop" class="btn btn-info text-dark" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-nav fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-bold text-accent" href="#hero">
+            <a class="navbar-brand fw-bold text-accent" href="#page-top">
                 <i class="fa-solid fa-terminal me-2"></i>Shahd.A
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#favorites">Favorites</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- 1. Hero Section -->
-    <section id="hero" class="hero-section d-flex align-items-center text-center">
-        <div class="container">
+    <!-- Hero / Welcome Section -->
+    <header class="hero-section d-flex align-items-center text-center pt-5">
+        <div class="container py-5 mt-5">
             <span class="badge bg-secondary mb-3 px-3 py-2 text-uppercase">Welcome to my space</span>
-            <h1 class="display-3 fw-bold mb-3">Hi, I'm <span class="text-accent">Shahd Abdelhamid</span></h1>
-            <p class="lead text-light-50 mb-4 mx-auto" style="max-width: 650px;">
-                Computer Science Student passionate about Cybersecurity, Blue Team operations, and Building impactful software.
+            <h1 class="display-3 fw-bold mb-3 text-light">Hi, I'm <span class="text-accent">Shahd Abdelhamid</span></h1>
+            <p class="fs-4 text-light mb-4">
+                I am a <span id="typewriter-text" class="text-accent fw-bold"></span><span class="text-accent">|</span>
             </p>
             <div class="d-flex justify-content-center gap-3">
-                <a href="#projects" class="btn btn-outline-info px-4 py-2">View Projects</a>
-                <a href="#contact" class="btn btn-info px-4 py-2 text-dark fw-semibold">Get in Touch</a>
+                <a class="btn btn-outline-info px-4 py-2" href="#projects">View Projects</a>
+                <a class="btn btn-info px-4 py-2 text-dark fw-semibold" href="#favorites">My Favorites</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- 2. About Section -->
-    <section id="about" class="py-5 bg-black">
+    <!-- 1. About Section -->
+    <section class="py-5" id="about">
         <div class="container py-4">
             <h2 class="text-center fw-bold mb-5"><span class="text-accent">01.</span> About Me</h2>
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-8">
-                    <div class="p-4 p-md-5 rounded bg-card shadow-sm">
-                        <p class="fs-5 text-light-50 mb-4">
-                            I am a dedicated Computer Science student based in Debrecen, Hungary. My journey combines deep technical curiosity with a defensive mindset—specializing in security monitoring, event analysis, and systems automation.
+                    <div class="p-4 p-md-5 rounded bg-card interactive-card shadow-sm">
+                        <p class="fs-5 text-light mb-4">
+                            I am a Computer Science student with a strong passion for defensive cybersecurity, log analysis, and incident triage. I combine algorithmic problem-solving with a security mindset to defend critical systems.
                         </p>
-                        <hr class="border-secondary mb-4">
+                        <hr class="border-secondary mb-4" />
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <p class="mb-1 text-secondary"><i class="fa-solid fa-location-dot text-accent me-2"></i><strong>Location:</strong> Debrecen, Hungary</p>
-                                <p class="mb-1 text-secondary"><i class="fa-solid fa-shield-halved text-accent me-2"></i><strong>Core Focus:</strong> Blue Team / SOC</p>
+                                <p class="mb-2"><i class="fa-solid fa-location-dot text-accent me-2"></i><strong>Location:</strong> Debrecen, Hungary</p>
+                                <p class="mb-2"><i class="fa-solid fa-shield-halved text-accent me-2"></i><strong>Focus:</strong> Blue Team &amp; SOC Ops</p>
                             </div>
                             <div class="col-sm-6">
-                                <p class="mb-1 text-secondary"><i class="fa-solid fa-language text-accent me-2"></i><strong>Languages:</strong> Arabic, English, German</p>
-                                <p class="mb-1 text-secondary"><i class="fa-solid fa-code text-accent me-2"></i><strong>Stack:</strong> Java, Python, SQL, Bash</p>
+                                <p class="mb-2"><i class="fa-solid fa-language text-accent me-2"></i><strong>Languages:</strong> Arabic, English, German</p>
+                                <p class="mb-2"><i class="fa-solid fa-code text-accent me-2"></i><strong>Stack:</strong> Java, Python, SQL, Bash</p>
                             </div>
                         </div>
                     </div>
@@ -96,36 +82,36 @@
         </div>
     </section>
 
-    <!-- 3. Academics Section -->
-    <section id="academics" class="py-5 bg-dark">
+    <!-- 2. Academics Section -->
+    <section class="py-5 bg-black bg-opacity-25" id="academics">
         <div class="container py-4">
             <h2 class="text-center fw-bold mb-5"><span class="text-accent">02.</span> Academic Journey</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-5">
-                    <div class="p-4 rounded bg-card h-100 shadow-sm">
+                    <div class="p-4 rounded bg-card interactive-card h-100 shadow-sm">
                         <div class="d-flex align-items-center mb-3">
-                            <i class="fa-solid fa-graduation-cap fa-2x text-accent me-3"></i>
+                            <i class="fa-solid fa-graduation-cap fa-2x text-accent hover-icon me-3"></i>
                             <div>
                                 <h5 class="mb-0 fw-bold">University of Debrecen</h5>
-                                <small class="text-secondary">BSc in Computer Science (Grad: 2027)</small>
+                                <small class="text-secondary">BSc in Computer Science (Expected 2027)</small>
                             </div>
                         </div>
-                        <p class="text-light-50">
-                            Focused on core computing fundamentals and defensive cybersecurity. Actively working on my thesis project: <em>"Automated Phishing Analysis Pipeline and SOC Dashboard"</em>.
+                        <p class="text-light">
+                            Studying foundational computer science while specializing in security. Thesis topic: <em>"Automated Phishing Analysis Pipeline and SOC Dashboard: A Web-Based Approach to Threat Triage"</em>.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <div class="p-4 rounded bg-card h-100 shadow-sm">
+                    <div class="p-4 rounded bg-card interactive-card h-100 shadow-sm">
                         <div class="d-flex align-items-center mb-3">
-                            <i class="fa-solid fa-school fa-2x text-accent me-3"></i>
+                            <i class="fa-solid fa-school fa-2x text-accent hover-icon me-3"></i>
                             <div>
                                 <h5 class="mb-0 fw-bold">Obour STEM School</h5>
-                                <small class="text-secondary">High School Diploma</small>
+                                <small class="text-secondary">Secondary Education</small>
                             </div>
                         </div>
-                        <p class="text-light-50">
-                            Developed a rigorous foundation in scientific research, computational thinking, and team-based engineering challenges.
+                        <p class="text-light">
+                            Cultivated a solid foundation in scientific research, computational thinking, and team-based engineering challenges.
                         </p>
                     </div>
                 </div>
@@ -133,40 +119,40 @@
         </div>
     </section>
 
-    <!-- 4. Projects Section -->
-    <section id="projects" class="py-5 bg-black">
+    <!-- 3. Projects Section -->
+    <section class="py-5" id="projects">
         <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5"><span class="text-accent">03.</span> Coding & Projects</h2>
+            <h2 class="text-center fw-bold mb-5"><span class="text-accent">03.</span> Coding &amp; Projects</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card bg-card text-light h-100 shadow-sm">
+                    <div class="card bg-card interactive-card text-light h-100 shadow-sm">
                         <div class="card-body p-4">
-                            <i class="fa-solid fa-shield-virus fa-2x text-accent mb-3"></i>
+                            <i class="fa-solid fa-network-wired fa-2x text-accent hover-icon mb-3"></i>
                             <h5 class="card-title fw-bold">Wazuh SIEM Lab</h5>
                             <p class="card-text text-secondary">
-                                Deployed a centralized SIEM environment on Ubuntu to ingest authentication logs, monitor anomalous behavior, and triage security incidents.
+                                Deployed and configured a Wazuh SIEM lab environment on Ubuntu VMs to ingest authentication logs and investigate security events centrally.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card bg-card text-light h-100 shadow-sm">
+                    <div class="card bg-card interactive-card text-light h-100 shadow-sm">
                         <div class="card-body p-4">
-                            <i class="fa-solid fa-gears fa-2x text-accent mb-3"></i>
-                            <h5 class="card-title fw-bold">Scripting & Automation</h5>
+                            <i class="fa-solid fa-gears fa-2x text-accent hover-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Automation &amp; Scripting</h5>
                             <p class="card-text text-secondary">
-                                Created automated data processing scripts using Python and Bash, and solved complex problem-solving coursework using Java Streams and SQL.
+                                Developed scripts using Python and Bash for log parsing and automation, along with backend coursework in Java Streams and relational SQL.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card bg-card text-light h-100 shadow-sm">
+                    <div class="card bg-card interactive-card text-light h-100 shadow-sm">
                         <div class="card-body p-4">
-                            <i class="fa-solid fa-certificate fa-2x text-accent mb-3"></i>
-                            <h5 class="card-title fw-bold">SOC Labs & Certs</h5>
+                            <i class="fa-solid fa-shield-cat fa-2x text-accent hover-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">SOC Paths &amp; Certs</h5>
                             <p class="card-text text-secondary">
-                                Completed TryHackMe SOC Level 1 learning path, earned Microsoft SC-900, and continuously practicing alert analysis and threat hunting.
+                                Finished TryHackMe SOC Level 1 path, earned Microsoft SC-900 certification, and actively training on Sentinel and KQL for SC-200.
                             </p>
                         </div>
                     </div>
@@ -175,52 +161,54 @@
         </div>
     </section>
 
-    <!-- 5. Favorites Section -->
-    <section id="favorites" class="py-5 bg-dark">
+    <!-- 4. Favorites Section -->
+    <section class="py-5 bg-black bg-opacity-25" id="favorites">
         <div class="container py-4">
-            <h2 class="text-center fw-bold mb-5"><span class="text-accent">04.</span> Lifestyle & Favorites</h2>
+            <h2 class="text-center fw-bold mb-5"><span class="text-accent">04.</span> Lifestyle &amp; Favorites</h2>
             <div class="row g-4 text-center">
                 <div class="col-6 col-md-3">
-                    <div class="p-4 rounded bg-card h-100 shadow-sm">
-                        <i class="fa-solid fa-mug-hot fa-2x text-accent mb-3"></i>
+                    <div class="p-4 rounded bg-card interactive-card h-100 shadow-sm">
+                        <i class="fa-solid fa-mug-hot fa-2x text-accent hover-icon mb-3"></i>
                         <h6 class="fw-bold">Morning Coffee</h6>
-                        <small class="text-secondary">Brewing fresh coffee with Nespresso Essenza Mini</small>
+                        <small class="text-secondary">Fresh espresso with Krups Essenza Mini</small>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <div class="p-4 rounded bg-card h-100 shadow-sm">
-                        <i class="fa-solid fa-mitten fa-2x text-accent mb-3"></i>
+                    <div class="p-4 rounded bg-card interactive-card h-100 shadow-sm">
+                        <i class="fa-solid fa-mitten fa-2x text-accent hover-icon mb-3"></i>
                         <h6 class="fw-bold">Crochet</h6>
-                        <small class="text-secondary">Handmade bags & cozy accessories</small>
+                        <small class="text-secondary">Handmade bags &amp; accessories with yarn</small>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <div class="p-4 rounded bg-card h-100 shadow-sm">
-                        <i class="fa-solid fa-utensils fa-2x text-accent mb-3"></i>
+                    <div class="p-4 rounded bg-card interactive-card h-100 shadow-sm">
+                        <i class="fa-solid fa-utensils fa-2x text-accent hover-icon mb-3"></i>
                         <h6 class="fw-bold">Cooking</h6>
-                        <small class="text-secondary">Air fryer experiments & homemade pasta</small>
+                        <small class="text-secondary">Air fryer magic &amp; homemade Béchamel pasta</small>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <div class="p-4 rounded bg-card h-100 shadow-sm">
-                        <i class="fa-solid fa-bicycle fa-2x text-accent mb-3"></i>
-                        <h6 class="fw-bold">Cycling & Walking</h6>
-                        <small class="text-secondary">Riding across Debrecen & indoor fitness</small>
+                    <div class="p-4 rounded bg-card interactive-card h-100 shadow-sm">
+                        <i class="fa-solid fa-bicycle fa-2x text-accent hover-icon mb-3"></i>
+                        <h6 class="fw-bold">Daily Fitness</h6>
+                        <small class="text-secondary">Cycling in Debrecen &amp; Walk at Home</small>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer / Contact -->
-    <footer id="contact" class="py-4 bg-black border-top border-secondary text-center">
+    <!-- Footer -->
+    <footer class="py-4 bg-black border-top border-secondary border-opacity-25 text-center">
         <div class="container">
-            <p class="text-secondary mb-1">Built with Bootstrap 5 &amp; Responsive Web Design</p>
+            <p class="text-secondary mb-1">Crafted with Responsive Web Design (Bootstrap 5, Custom CSS &amp; JS)</p>
             <p class="text-light fw-bold mb-0">Shahd Abdelhamid &copy; 2026</p>
         </div>
     </footer>
 
-    <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS -->
+    <script src="js/scripts.js"></script>
 </body>
 </html>
