@@ -1,54 +1,47 @@
-/*!
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
-    */
-    (function ($) {
-    "use strict"; // Start of use strict
+document.addEventListener("DOMContentLoaded", () => {
 
-    // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-        if (
-            location.pathname.replace(/^\//, "") ==
-                this.pathname.replace(/^\//, "") &&
-            location.hostname == this.hostname
-        ) {
-            var target = $(this.hash);
-            target = target.length
-                ? target
-                : $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                $("html, body").animate(
-                    {
-                        scrollTop: target.offset().top - 72,
-                    },
-                    1000,
-                    "easeInOutExpo"
-                );
-                return false;
-            }
-        }
-    });
+   const typewriterElement = document.getElementById("typewriter-text");
+    const roles = [
+        "Cybersecurity Enthusiast",
+        "Computer Science Student",
+        "Blue Team & SOC Learner"
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-    // Closes responsive menu when a scroll trigger link is clicked
-    $(".js-scroll-trigger").click(function () {
-        $(".navbar-collapse").collapse("hide");
-    });
-
-    // Activate scrollspy to add active class to navbar items on scroll
-    $("body").scrollspy({
-        target: "#mainNav",
-        offset: 74,
-    });
-
-    // Collapse Navbar
-    var navbarCollapse = function () {
-        if ($("#mainNav").offset().top > 100) {
-            $("#mainNav").addClass("navbar-shrink");
+    function typeEffect() {
+        if (!typewriterElement) return;
+        const currentRole = roles[roleIndex];
+        if (isDeleting) {
+            typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
         } else {
-            $("#mainNav").removeClass("navbar-shrink");
+            typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
         }
-    };
-    // Collapse now if page is not at top
-    navbarCollapse();
-    // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse);
-})(jQuery); // End of use strict
+
+        let speed = isDeleting ? 40 : 80;
+        if (!isDeleting && charIndex === currentRole.length) {
+            speed = 1800;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            speed = 400;
+        }
+        setTimeout(typeEffect, speed);
+    }
+    typeEffect();
+
+
+   const backToTopBtn = document.getElementById("backToTop");
+    if (backToTopBtn) {
+        window.addEventListener("scroll", () => {
+            backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+});
